@@ -1,49 +1,37 @@
 export interface TryDataStateInterface {
-  directories:object[],
-  directories_menu:{name:string,method:string,disable:boolean,color:string}[]
+  dirs:{id:number,name:string,parent:string,able:boolean}[],
+  questions:{id:number,question:string,answer:string,lasttime:number,timelength:number, did:number}
+  dir_Menu:{name:string,method:string,disable:boolean,color:string}[]
 }
 
 const state: TryDataStateInterface = {
-  directories:[
-          {
-            label: 'vue',
-            children: [
-              {
-                label: 'Good food (with icon)',
-                children: [
-                  { label: 'Quality ingredients' },
-                  { label: 'Good recipe' }
-                ]
-              },
-              {
-                label: 'Good service (disabled node with icon)',
-                disabled: true,
-                children: [
-                  { label: 'Prompt attention' },
-                  { label: 'Professional waiter' }
-                ]
-              },
-              {
-                label: 'Pleasant surroundings (with icon)',
-                children: [
-                  {
-                    label: 'Happy atmosphere (with image)'
-                  },
-                  { label: 'Good table presentation' },
-                  { label: 'Pleasing decor' }
-                ]
-              }
-            ]
-          }
+  dirs:[
+       {id:0,name:"书0",parent:"root",able:true},
+       {id:1,name:"书1",parent:"root",able:true},
+       {id:2,name:"书2",parent:"root",able:true},
+       {id:3,name:"书3",parent:"root",able:true},
+       {id:4,name:"书4",parent:"root",able:true},
+       {id:5,name:"书5",parent:"root",able:true},
+      ],
+  questions:[
+      {id:0,question:"问题0",answer:"答案0",lasttime:1,timelength:0, did:0},
+      {id:1,question:"问题1",answer:"答案1",lasttime:1,timelength:0, did:0},
+      {id:2,question:"问题2",answer:"答案2",lasttime:1,timelength:0, did:0},
+      {id:3,question:"问题1",answer:"答案3",lasttime:1,timelength:0, did:1},
+      {id:4,question:"问题1",answer:"答案4",lasttime:1,timelength:0, did:1},
+      {id:5,question:"问题1",answer:"答案5",lasttime:1,timelength:0, did:1},
+      {id:6,question:"问题1",answer:"答案6",lasttime:1,timelength:0, did:2},
+      {id:7,question:"问题1",answer:"答案7",lasttime:1,timelength:0, did:2},
+      {id:8,question:"问题1",answer:"答案8",lasttime:1,timelength:0, did:2},
         ],
-  directories_menu:[
-    {name:"新建目录",method:"create_directory",disabled:false,activeClass:"text-blue"},
-    {name:"新建问题",method:"create_question",disabled:false,activeClass:"text-primary"},
-    {name:"移动",method:"move",disabled:false,activeClass:"text-primary"},
-    {name:"编辑目录",method:"edit_directory",disabled:false,activeClass:"text-primary"},
-    {name:"编辑问题",method:"edit_question",disabled:false,activeClass:"text-primary"},
-    {name:"删除",method:"del",disabled:false,activeClass:"text-primary"},
-    {name:"进行测试",method:"go_test",disabled:false,activeClass:"text-primary"},
+  dirMenu:[
+    {name:"新建目录",method:"create_directory",able:true,activeClass:"text-blue"},
+    {name:"新建问题",method:"create_question",able:true,activeClass:"text-primary"},
+    {name:"移动",method:"move",able:true,activeClass:"text-primary"},
+    {name:"编辑目录",method:"edit_directory",able:true,activeClass:"text-primary"},
+    {name:"编辑问题",method:"edit_question",able:true,activeClass:"text-primary"},
+    {name:"删除",method:"del",able:true,activeClass:"text-primary"},
+    {name:"进行测试",method:"go_test",able:true,activeClass:"text-primary"},
   ]
 };
 export default state;
