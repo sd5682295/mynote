@@ -8,6 +8,11 @@ const routes: RouteConfig[] = [
       { path: '', component: () => import('pages/Index.vue') }
     ]
   },
+  {
+    name: 'helloworld',
+    path: '/helloworld',
+    component: () => import('components/demo/helloworld.vue')
+  },
 
   // Always leave this as last one,
   // but you can also remove it

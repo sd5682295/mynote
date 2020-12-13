@@ -45,6 +45,9 @@ export default defineComponent({
     icon: {
       type: String,
       default: ''
+    },
+    to:{
+      type:String
     }
   }
 });

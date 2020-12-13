@@ -1,11 +1,11 @@
 import { Module } from 'vuex';
 import { StateInterface } from '../index';
-import state, { TryDataStateInterface } from './state';
+import state, { ExampleStateInterface } from './state';
 import actions from './actions';
 import getters from './getters';
 import mutations from './mutations';
 
-const tryModule: Module<TryDataStateInterface, StateInterface> = {
+const exampleModule: Module<ExampleStateInterface, StateInterface> = {
   namespaced: true,
   actions,
   getters,
@@ -13,4 +13,4 @@ const tryModule: Module<TryDataStateInterface, StateInterface> = {
   state
 };
 
-export default tryModule;
+export default exampleModule;

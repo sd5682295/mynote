@@ -21,7 +21,6 @@
     "@types/node": "^10.17.15"
   },
   "browserslist": [
-    "ie >= 11",
     "last 10 Chrome versions",
     "last 10 Firefox versions",
     "last 4 Edge versions",
